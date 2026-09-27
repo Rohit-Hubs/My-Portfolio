@@ -26,7 +26,7 @@ export default function About() {
           learn best by building, testing, and improving.
         </p>
         <a className="text-link" href="#contact">
-          Have something in mind? Let’s connect ↗
+          Have something in mind? Let’s connect 
         </a>
       </div>
     </section>

@@ -20,7 +20,7 @@ export default function Hero() {
         </p>
         <div className="actions">
           <a className="button primary" href="#projects">
-            Explore my work <span aria-hidden="true">↗</span>
+            Explore my work
           </a>
           <a
             className="button secondary"
@@ -28,7 +28,7 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            View résumé <span aria-hidden="true">↓</span>
+            View résumé
           </a>
         </div>
         <div className="hero-meta">
@@ -58,7 +58,7 @@ export default function Hero() {
       <div className="hero-bottom">
         <span>FROM AN IDEA TO SOMETHING USEFUL</span>
         <a href="#projects">
-          Scroll to discover <span aria-hidden="true">↓</span>
+          Scroll to discover
         </a>
       </div>
     </section>

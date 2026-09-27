@@ -42,7 +42,7 @@ export default function Navigation() {
             className="nav-contact"
             onClick={() => setOpen(false)}
           >
-            Let’s talk <span aria-hidden="true">↗</span>
+            Let’s talk
           </a>
         </nav>
       </div>

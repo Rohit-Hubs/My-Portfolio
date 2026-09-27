@@ -28,7 +28,7 @@ export default function Home() {
           Rk
         </a>
         <p>© {new Date().getFullYear()} Rohith Kumar Chelluboina</p>
-        <a href="#home">Back to top ↑</a>
+        <a href="#home">Back to top </a>
       </footer>
       <Chatbot />
     </>

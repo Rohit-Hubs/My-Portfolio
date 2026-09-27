@@ -75,11 +75,6 @@ export default function Projects() {
                   <div key={stage}>
                     <span className="stage-index">0{i + 1}</span>
                     <span>{stage}</span>
-                    {i < 2 && (
-                      <span className="stage-arrow" aria-hidden="true">
-                        ↓
-                      </span>
-                    )}
                   </div>
                 ))}
               </div>
@@ -101,7 +96,7 @@ export default function Projects() {
                   rel="noopener noreferrer"
                   aria-label="Get Rennto on Google Play"
                 >
-                  Get it on Google Play ↗
+                  Get it on Google Play 
                 </a>
               )}
               <details>
@@ -116,7 +111,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    View source on GitHub ↗
+                    View source on GitHub 
                   </a>
                 )}
               </details>
@@ -130,7 +125,7 @@ export default function Projects() {
         target="_blank"
         rel="noopener noreferrer"
       >
-        More on GitHub <span aria-hidden="true">↗</span>
+        More on GitHub
       </a>
     </section>
   );

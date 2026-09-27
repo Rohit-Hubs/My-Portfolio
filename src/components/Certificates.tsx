@@ -134,7 +134,6 @@ export default function Certificates() {
             <span className="certificate-issuer">{cert.issuer}</span>
             <span>{cert.title}</span>
             <span className="certificate-date">{cert.date}</span>
-            <span aria-hidden="true">↗</span>
           </a>
         ))}
       </div>
@@ -154,7 +153,6 @@ export default function Certificates() {
               <span className="certificate-issuer">{cert.issuer}</span>
               <span>{cert.title}</span>
               <span className="certificate-date">{cert.date}</span>
-              <span aria-hidden="true">↗</span>
             </a>
           ))}
         </div>

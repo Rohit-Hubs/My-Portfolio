@@ -16,7 +16,7 @@ const groups = [
   },
   {
     "name": "Agents & retrieval",
-    "icon": "↗",
+    "icon": "◎",
     "description": "Context, memory, and document intelligence.",
     "skills": [
       "LangChain",

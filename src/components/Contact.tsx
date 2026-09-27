@@ -39,7 +39,7 @@ export default function Contact() {
             talk tech? I’d love to hear from you.
           </p>
           <a className="email-link" href="mailto:chelluboinarohit1@gmail.com">
-            chelluboinarohit1@gmail.com ↗
+            chelluboinarohit1@gmail.com 
           </a>
           <div className="social-links">
             <a
@@ -47,21 +47,21 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub ↗
+              GitHub 
             </a>
             <a
               href="https://www.linkedin.com/in/rohith-kumar-chelluboina/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn ↗
+              LinkedIn 
             </a>
             <a
               href="https://leetcode.com/u/R0hith_kumar/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              LeetCode ↗
+              LeetCode 
             </a>
           </div>
         </div>
@@ -101,7 +101,6 @@ export default function Contact() {
           </label>
           <button className="button primary" disabled={status === "sending"}>
             {status === "sending" ? "Sending…" : "Send message"}
-            <span aria-hidden="true">↗</span>
           </button>
           <p
             className={`form-status ${status}`}

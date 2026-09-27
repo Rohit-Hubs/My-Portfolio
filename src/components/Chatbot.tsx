@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
 type Message = { role: "user" | "bot"; content: string };
 export default function Chatbot() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   const [messages, setMessages] = useState<Message[]>([
     {
       role: "bot",
@@ -15,9 +15,6 @@ export default function Chatbot() {
   const inputRef = useRef<HTMLInputElement>(null);
   const launcherRef = useRef<HTMLButtonElement>(null);
   const endRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (open) inputRef.current?.focus();
-  }, [open]);
   useEffect(() => {
     if (open) endRef.current?.scrollIntoView({ block: "nearest" });
   }, [messages, loading, open]);
@@ -68,11 +65,11 @@ export default function Chatbot() {
         <button
           ref={launcherRef}
           className="chat-launcher"
-          onClick={() => setOpen(true)}
+          onClick={() => { setOpen(true); requestAnimationFrame(() => inputRef.current?.focus()); }}
           aria-expanded={false}
           aria-controls="portfolio-chat"
         >
-          <span aria-hidden="true">✳</span> Ask my AI
+          Ask my AI
         </button>
       )}
       {open && (
