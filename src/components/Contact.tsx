@@ -20,10 +20,8 @@ export default function Contact() {
       if (!response.ok) throw new Error("Send failed");
       setStatus("success");
       form.reset();
-      window.alert("Message sent successfully! Thank you for reaching out.");
     } catch {
       setStatus("error");
-      window.alert("Your message could not be sent. Please try again or email chelluboinarohit1@gmail.com.");
     }
   }
   return (
@@ -66,9 +64,6 @@ export default function Contact() {
               LeetCode ↗
             </a>
           </div>
-          <a className="text-link" href="/resume.pdf" download>
-            Download résumé ↓
-          </a>
         </div>
         <form onSubmit={submit} className="contact-form">
           <div className="form-row">
@@ -114,7 +109,7 @@ export default function Contact() {
             aria-live="polite"
           >
             {status === "success"
-              ? "Thanks! Your message has been sent."
+              ? "Message sent successfully. Thank you for reaching out — I’ll reply by email."
               : status === "error"
                 ? "Your message couldn’t be sent. Please try again or use the email link."
                 : "I’ll get back to you by email."}

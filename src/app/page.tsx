@@ -25,7 +25,7 @@ export default function Home() {
       </main>
       <footer className="container site-footer">
         <a className="wordmark" href="#home">
-          rk<span>.</span>
+          Rk
         </a>
         <p>© {new Date().getFullYear()} Rohith Kumar Chelluboina</p>
         <a href="#home">Back to top ↑</a>

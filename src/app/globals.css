@@ -1113,3 +1113,14 @@ textarea {
   .portrait-wrap { animation: enter 850ms ease-out both; }
 }
 @keyframes enter { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Contact feedback stays within the form, without a browser dialog. */
+.form-status.success, .form-status.error {
+  padding: 16px 18px;
+  border: 1px solid currentColor;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.form-status.success { background: rgba(166, 239, 197, 0.08); }
+.form-status.error { background: rgba(255, 120, 120, 0.08); }

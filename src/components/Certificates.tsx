@@ -1,7 +1,7 @@
 const CERTIFICATES = [
   {
     id: "internship",
-    title: "AI Developer Internship",
+    title: "AI Internship",
     issuer: "CYPWNG Software Technologies",
     date: "Sep 2025",
     link: "/Intern_Certificate_R.pdf",

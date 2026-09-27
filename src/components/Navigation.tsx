@@ -14,7 +14,7 @@ export default function Navigation() {
     <header className="site-header">
       <div className="container nav-inner">
         <a className="wordmark" href="#home" aria-label="Rohith Kumar home">
-          rk<span>.</span>
+          Rk
         </a>
         <button
           className="menu-toggle"
