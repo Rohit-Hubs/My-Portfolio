@@ -9,8 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Scrollytelling Portfolio",
-  description: "A cinematic developer portfolio.",
+  icons: { icon: "/icon.svg" },
+  title: "Rohith Kumar | AI & Machine Learning Engineer",
+  description:
+    "Rohith Kumar Chelluboina — AI & ML engineer in Hyderabad. Explore AI agents, RAG systems, full-stack projects, experience, and certifications.",
 };
 
 export default function RootLayout({
@@ -20,9 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} antialiased`}>
-        {children}
-      </body>
+      <body className={`${inter.variable} antialiased`}>{children}</body>
     </html>
   );
 }
