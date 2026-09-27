@@ -1,52 +1,90 @@
 const groups = [
   {
-    name: "AI & intelligence",
-    icon: "✳",
-    description: "Models, agents, and retrieval workflows.",
-    skills: [
+    "name": "AI & machine learning",
+    "icon": "✳",
+    "description": "Models, language, and intelligent applications.",
+    "skills": [
+      "Machine learning",
+      "NLP",
+      "LLMs",
+      "Generative AI",
+      "PyTorch",
+      "TensorFlow",
+      "Pandas",
+      "NumPy"
+    ]
+  },
+  {
+    "name": "Agents & retrieval",
+    "icon": "↗",
+    "description": "Context, memory, and document intelligence.",
+    "skills": [
       "LangChain",
       "LangGraph",
       "RAG",
-      "LLMs",
+      "AI agents",
       "Prompt engineering",
-      "PyTorch",
-      "TensorFlow",
-      "Scikit-learn",
-      "NLP",
-    ],
+      "Ollama",
+      "Vector databases",
+      "FAISS",
+      "BM25 / Hybrid search",
+      "AI automation"
+    ]
   },
   {
-    name: "Applications & APIs",
-    icon: "</>",
-    description: "From a responsive interface to its backend.",
-    skills: [
+    "name": "Applications & APIs",
+    "icon": "</>",
+    "description": "Mobile experiences and connected backends.",
+    "skills": [
       "Python",
       "JavaScript",
-      "React",
+      "React.js",
+      "React Native",
       "Django",
       "FastAPI",
-      "Flask",
-      "HTML & CSS",
+      "HTML",
+      "CSS",
       "REST APIs",
-    ],
+      "API integration"
+    ]
   },
   {
-    name: "Data & infrastructure",
-    icon: "⊞",
-    description: "The foundations that keep things running.",
-    skills: [
-      "PostgreSQL",
-      "SQLite",
-      "FAISS",
-      "BM25",
-      "Pandas",
-      "NumPy",
+    "name": "Data & deployment",
+    "icon": "⊞",
+    "description": "Data foundations and reliable delivery.",
+    "skills": [
+      "SQL",
+      "Google Cloud Platform",
       "Docker",
-      "Kubernetes",
-      "Google Cloud",
       "Git",
-    ],
+      "CI/CD pipelines"
+    ]
   },
+  {
+    "name": "Development tools",
+    "icon": "⌘",
+    "description": "Tools for building, exploring, and iterating.",
+    "skills": [
+      "Visual Studio Code",
+      "Google Colab",
+      "Jupyter Notebook",
+      "Streamlit",
+      "AI coding tools"
+    ]
+  },
+  {
+    "name": "Engineering practices",
+    "icon": "✓",
+    "description": "Structure, quality, and maintainable software.",
+    "skills": [
+      "Data structures & algorithms",
+      "Object-oriented programming",
+      "Debugging",
+      "Unit testing",
+      "Agile",
+      "SDLC"
+    ]
+  }
 ];
 export default function Skills() {
   return (
