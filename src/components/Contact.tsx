@@ -20,8 +20,10 @@ export default function Contact() {
       if (!response.ok) throw new Error("Send failed");
       setStatus("success");
       form.reset();
+      window.alert("Message sent successfully! Thank you for reaching out.");
     } catch {
       setStatus("error");
+      window.alert("Your message could not be sent. Please try again or email chelluboinarohit1@gmail.com.");
     }
   }
   return (

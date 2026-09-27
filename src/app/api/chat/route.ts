@@ -33,7 +33,7 @@ export async function POST(req: Request) {
       );
     }
 
-    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+    const groq = new Groq({ apiKey: process.env.GROQ_API_KEY.trim(), timeout: 20000, maxRetries: 1 });
     const { messages } = await req.json();
 
     // Map frontend messages to Groq format (role: 'user' | 'assistant' | 'system')
@@ -47,7 +47,7 @@ export async function POST(req: Request) {
 
     const chatCompletion = await groq.chat.completions.create({
       messages: groqMessages,
-      model: "llama-3.3-70b-versatile",
+      model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
       temperature: 0.7,
       max_tokens: 1024,
     });
@@ -57,10 +57,15 @@ export async function POST(req: Request) {
         chatCompletion.choices[0]?.message?.content || "No response generated.",
     });
   } catch (error) {
-    console.error("Chat API Error:", error);
-    return NextResponse.json(
-      { error: "Failed to process chat request" },
-      { status: 500 },
-    );
+    const status = error instanceof Groq.APIError ? error.status : undefined;
+    const code = status === 401 || status === 403 ? "AI_AUTH_ERROR"
+      : status === 429 ? "AI_RATE_LIMIT"
+      : status === 400 || status === 404 ? "AI_MODEL_ERROR"
+      : "AI_UNAVAILABLE";
+    console.error("Chat API Error:", { status, code });
+    const message = code === "AI_RATE_LIMIT"
+      ? "The AI assistant is busy right now. Please try again in a minute."
+      : "The AI assistant is temporarily unavailable. Please try again later or email chelluboinarohit1@gmail.com.";
+    return NextResponse.json({ error: message, code }, { status: 503 });
   }
 }

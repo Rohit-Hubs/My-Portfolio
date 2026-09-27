@@ -44,15 +44,17 @@ export default function Chatbot() {
       });
       const data = await res.json();
       if (!res.ok || typeof data.content !== "string")
-        throw new Error("Unavailable");
+        throw new Error(typeof data.error === "string" ? data.error : "The AI assistant is temporarily unavailable. Please try again later.");
       setMessages([...next, { role: "bot", content: data.content }]);
-    } catch {
+    } catch (error) {
       setMessages([
         ...next,
         {
           role: "bot",
           content:
-            "I’m unable to reply right now. You can explore Rohith’s projects below or email chelluboinarohit1@gmail.com.",
+            error instanceof Error && error.name !== "TimeoutError" && error.name !== "TypeError"
+              ? error.message
+              : "The request timed out or could not connect. Please try again.",
         },
       ]);
     } finally {
