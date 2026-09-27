@@ -1,10 +1,17 @@
 const items = [
   {
+    date: "FEB — AUG 2026",
+    type: "EXPERIENCE",
+    title: "Full Stack Developer Intern",
+    org: "Tanvox Technologies Pvt. Ltd",
+    text: "Developed cross-platform applications using React, React Native, Django, Python, REST APIs, and SQL. Built reusable frontend components, backend services, and API integrations, optimized database performance, and supported testing, debugging, code reviews, deployment, and maintenance through Agile and Git-based workflows.",
+  },
+  {
     date: "MAR — SEP 2025",
     type: "EXPERIENCE",
-    title: "AI Developer Intern",
+    title: "Software Developer (AI Specialist) Intern",
     org: "CYPWNG Software Technologies",
-    text: "Built Python feature-extraction microservices and GenAI RAG pipelines, working with LangChain, Docker, Kubernetes, and Google Cloud CI/CD.",
+    text: "Developed AI-native applications and agentic workflows using Python, FastAPI, LangChain, and LangGraph. Built and optimized RAG pipelines with FAISS, embeddings, and hybrid search, developed RESTful backend services, and containerized AI services with Docker. Collaborated through Agile and Git-based workflows on debugging, performance optimization, and deployment.",
   },
   {
     date: "2023 — 2026",
