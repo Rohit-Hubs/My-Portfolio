@@ -47,9 +47,9 @@ export async function POST(req: Request) {
 
     const chatCompletion = await groq.chat.completions.create({
       messages: groqMessages,
-      model: process.env.GROQ_MODEL || "llama-3.3-70b-versatile",
+      model: process.env.GROQ_MODEL || "openai/gpt-oss-120b",
       temperature: 0.7,
-      max_tokens: 1024,
+      max_completion_tokens: 2048,
     });
 
     return NextResponse.json({
@@ -69,3 +69,4 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: message, code }, { status: 503 });
   }
 }
+
