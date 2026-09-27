@@ -1,6 +1,19 @@
 const projects = [
   {
     number: "01",
+    name: "Rennto",
+    category: "LIVE ANDROID APP",
+    description: "Simplifying rental life for owners and tenants.",
+    detail:
+      "A property and tenant management app available on Google Play. Rennto brings property, room, and bed management together with tenant onboarding, occupancy tracking, rental records, and service requests. Dedicated owner and tenant dashboards keep everyday rental operations organized in one place.",
+    tags: ["Android", "Property management", "Tenant onboarding"],
+    repo: null,
+    playStore: "https://play.google.com/store/apps/details?id=in.rennto.app",
+    style: "mint",
+    stages: ["Manage properties", "Onboard tenants", "Track rental operations"],
+  },
+  {
+    number: "02",
     name: "IntelliAgent",
     category: "MULTI-AGENT RAG",
     description: "Make your documents a conversation.",
@@ -12,7 +25,7 @@ const projects = [
     stages: ["Your documents", "Hybrid retrieval", "Grounded answers"],
   },
   {
-    number: "02",
+    number: "03",
     name: "AI Memory Agent",
     category: "CONVERSATIONAL AI",
     description: "An assistant that remembers the context.",
@@ -24,7 +37,7 @@ const projects = [
     stages: ["Conversation", "Memory + tools", "Contextual response"],
   },
   {
-    number: "03",
+    number: "04",
     name: "Visa2Book",
     category: "FULL-STACK DEVELOPMENT",
     description: "Connecting interfaces with intelligence.",
@@ -70,7 +83,7 @@ export default function Projects() {
                   </div>
                 ))}
               </div>
-              <span className="visual-caption">SYSTEM OVERVIEW</span>
+              <span className="visual-caption">{p.playStore ? "AVAILABLE ON GOOGLE PLAY" : "SYSTEM OVERVIEW"}</span>
             </div>
             <div className="project-body">
               <h3>{p.name}</h3>
@@ -80,6 +93,17 @@ export default function Projects() {
                   <span key={tag}>{tag}</span>
                 ))}
               </div>
+              {p.playStore && (
+                <a
+                  className="text-link"
+                  href={p.playStore}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Get Rennto on Google Play"
+                >
+                  Get it on Google Play ↗
+                </a>
+              )}
               <details>
                 <summary>
                   Explore the project <span aria-hidden="true">+</span>
