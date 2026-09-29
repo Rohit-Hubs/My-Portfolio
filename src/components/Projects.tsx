@@ -36,18 +36,7 @@ const projects = [
     style: "blue",
     stages: ["Conversation", "Memory + tools", "Contextual response"],
   },
-  {
-    number: "04",
-    name: "Visa2Book",
-    category: "FULL-STACK DEVELOPMENT",
-    description: "Connecting interfaces with intelligence.",
-    detail:
-      "A responsive web application with Django form handling and backend routing, plus AI components for pattern recognition and recommendations.",
-    tags: ["Django", "Python", "JavaScript", "AI integration"],
-    repo: null,
-    style: "amber",
-    stages: ["Web interface", "Django backend", "AI recommendations"],
-  },
+
 ];
 export default function Projects() {
   return (
